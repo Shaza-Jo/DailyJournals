@@ -1,0 +1,12 @@
+<%- include partials/header.ejs %> 
+<h1>HOME</h1>
+<p> Welcome to Daily Journal, the perfect place to document your daily thoughts, memories, and experiences. Our website is designed to provide you with a simple and intuitive platform to record your daily journey, reflect on your growth, and preserve your memories for years to come. With features like privacy controls, multimedia support, and customizable templates, you can make your journal as unique as you are. Start your daily habit of self-expression and reflection today and join the community of journalers who are discovering the benefits of keeping a daily journal. </p>
+<% composeDatas.forEach(data => { %>
+    <h2><%= data.title %> </h2>
+    <p><%= data.body.substring(0,50) + "...." %> <a href="/users/ + <%=data.title%>">Read more</a></p>
+<% }); %>
+
+
+    
+<%- include partials/footer.ejs %> 
+ 
